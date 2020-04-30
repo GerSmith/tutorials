@@ -1,4 +1,4 @@
-#! python
+#!python
 # -*- coding: utf-8 -*-
 
 # напишите здесь функцию print_shopping_list(),

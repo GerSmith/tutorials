@@ -1,4 +1,4 @@
-#! python
+#!python
 # -*- coding: utf-8 -*-
 
 def sayhello():
