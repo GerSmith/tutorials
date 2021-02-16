@@ -1,7 +1,8 @@
 #!python
 # -*- coding: utf-8 -*-
 
-# 10 практик кода, ускоряющих выполнение программ на Python
+"""10 практик кода, ускоряющих выполнение программ на Python."""
+
 import random
 import time
 
@@ -12,7 +13,7 @@ a_long_list = [random.randint(0, 50) for i in range(1000000)]
 
 a_dict = {'A': 1, 'B': 3, 'C': 2, 'D': 4, 'E': 5}
 
-another_long_list = [random.randint(0,500) for i in range(1000000)]
+another_long_list = [random.randint(0, 500) for i in range(1000000)]
 
 # 1. Кастомная реализация set
 print('Кастомная реализация set')
@@ -72,15 +73,15 @@ a_long_list.sort()
 
 print(f'Прошло {(time.monotonic() - start_time):.3} секунд')
 
-# III. Литералы вместо функций           
+# III. Литералы вместо функций
 # 1. Создание пустого словаря с помощью dict()
 print('Создание пустого словаря с помощью dict()')
 start_time = time.monotonic()               # запускаем отсчёт времени
 
 sorted_dict1 = dict()
 
-for key, value in sorted(a_dict.items(), key=lambda item:item[1]):
-  sorted_dict1[key] = value
+for key, value in sorted(a_dict.items(), key=lambda item: item[1]):
+    sorted_dict1[key] = value
 
 print(f'Прошло {time.monotonic() - start_time} секунд')
 
@@ -90,8 +91,8 @@ start_time = time.monotonic()               # запускаем отсчёт в
 
 sorted_dict2 = {}
 
-for key, value in sorted(a_dict.items(), key=lambda item:item[1]):
-  sorted_dict2[key] = value
+for key, value in sorted(a_dict.items(), key=lambda item: item[1]):
+    sorted_dict2[key] = value
 
 print(f'Прошло {time.monotonic() - start_time} секунд')
 # 3. Создание пустого списка с помощью list()
@@ -116,8 +117,8 @@ start_time = time.monotonic()               # запускаем отсчёт в
 
 even_num = []
 for number in another_long_list:
-  if number % 2 == 0:
-    even_num.append(number)
+    if number % 2 == 0:
+        even_num.append(number)
 
 print(f'Прошло {(time.monotonic() - start_time):.3} секунд')
 # 2. Создание нового списка с помощью генератора списка

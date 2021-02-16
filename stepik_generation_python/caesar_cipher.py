@@ -1,11 +1,11 @@
 #! python
 # -*- coding: utf-8 -*-
 
-"""
-Скрипт шифрует и дешифрует текст в соответствии с алгоритмом Цезаря
- - направление: шифрование или дешифрование
- - язык алфавита: русский или английский
- - шаг сдвига (со сдвигом вправо)
+"""Скрипт шифрует и дешифрует текст в соответствии с алгоритмом Цезаря.
+
+- направление: шифрование или дешифрование
+- язык алфавита: русский или английский
+- шаг сдвига (со сдвигом вправо)
 """
 
 import string
@@ -20,8 +20,8 @@ pow_rus_abc = len(rus_low_abc)
 
 
 def get_shifted_letter(char: str, step: int) -> str:
-    """
-    Функция возвращает зашифрованный символ (char) сдвинутый на шаг (step) вправо относительно своего алфавита
+    """Функция возвращает зашифрованный символ (char)
+    сдвинутый на шаг (step) вправо относительно своего алфавита
     """
     if char in eng_up_abc:
         indx = (eng_up_abc.find(char) + step) % pow_eng_abc
@@ -40,8 +40,8 @@ def get_shifted_letter(char: str, step: int) -> str:
 
 
 def get_restored_letter(char: str, step: int) -> str:
-    """
-    Функция возвращает расшифрованный символ (char) сдвинутый на шаг (step) вправо относительно своего алфавита
+    """Функция возвращает расшифрованный символ (char)
+    сдвинутый на шаг (step) вправо относительно своего алфавита
     """
     if char in eng_up_abc:
         indx = (eng_up_abc.find(char) - step) % pow_eng_abc
@@ -75,7 +75,8 @@ text = 'Day, mice. "Year" is a mistake!'
 # len_lst = [3, 4, 4, 2, 1, 7]
 len_lst = [len(i) for i in re.findall(r'\b\w+\b', text)]
 for indx, value in enumerate(text.split()):
-    print(*[get_shifted_letter(i, len_lst[indx]) for i in value], sep='', end=' ')
+    print(*[get_shifted_letter(i, len_lst[indx])
+            for i in value], sep='', end=' ')
 
 """
 ----- тестовый вывод для отладки -----
