@@ -44,7 +44,7 @@ Pillow==7.1.2
 proglog==0.1.9
 prometheus-client==0.7.1
 prompt-toolkit==3.0.2
-Pygments==2.5.2
+Pygments==2.7.4
 PyInstaller==3.6
 pylint==2.4.4
 pyodbc==4.0.30
