@@ -1,0 +1,5 @@
+# линтеры
+autopep8
+pydocstyle
+pycodestyle
+pylint
